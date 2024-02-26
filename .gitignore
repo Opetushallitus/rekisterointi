@@ -26,3 +26,4 @@ node_modules/
 /rekisterointi-ui/npm-debug.log*
 /rekisterointi-ui/yarn-debug.log*
 /rekisterointi-ui/yarn-error.log*
+.DS_Store
