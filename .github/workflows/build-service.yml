@@ -4,6 +4,11 @@ on:
   push:
     branches: [master]
   pull_request:
+
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -40,7 +45,7 @@ jobs:
         uses: actions/cache@v4
         with:
           key: ${{ github.sha }}
-          path: target/rekisterointi.jar
+          path: target
   sonarcloud:
     runs-on: ubuntu-latest
     steps:
@@ -106,7 +111,7 @@ jobs:
           cd ../rekisterointi-ui
           ./scripts/ci-wait-for-frontend.sh
           HEADLESS=true npm run playwright:test
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: playwright-results
