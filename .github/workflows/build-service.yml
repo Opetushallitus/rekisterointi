@@ -36,7 +36,8 @@ jobs:
         with:
           name: rekisterointi-jar
           path: target/rekisterointi.jar
-      - uses: actions/cache@v4
+      - name: Cache artifact for deploy step
+        uses: actions/cache@v4
         with:
           key: ${{ github.sha }}
           path: target/rekisterointi.jar
