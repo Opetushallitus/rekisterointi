@@ -10,7 +10,7 @@
         "normalize.css": "^8.0.1",
         "oph-virkailija-style-guide": "github:Opetushallitus/virkailija-styles#master",
         "react": "^18.2.0",
-        "react-datepicker": "^4.11.0",
+        "react-datepicker": "^4.25.0",
         "react-dom": "^18.2.0",
         "react-helmet": "^6.1.0",
         "react-hook-form": "^7.43.9",
